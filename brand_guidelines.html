@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crest Solicitors Brand Guidelines | Crystal Keyamo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .document-title {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .document-subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .back-button {
+            background: rgba(30, 60, 114, 0.1);
+            color: #1e3c72;
+            border: 2px solid #1e3c72;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: #1e3c72;
+            color: white;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #1e3c72;
+        }
+
+        .section-title {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .color-card {
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .color-info {
+            background: #f8f9fa;
+            padding: 1rem;
+        }
+
+        .color-name {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-code {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .primary-blue { background: #1e3c72; }
+        .secondary-blue { background: #2a5298; }
+        .accent-gold { background: #d4af37; color: #333; }
+        .neutral-gray { background: #6c757d; }
+        .light-gray { background: #f8f9fa; color: #333; }
+
+        .typography-sample {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border-left: 4px solid #1e3c72;
+        }
+
+        .font-primary {
+            font-family: 'Georgia', serif;
+        }
+
+        .font-secondary {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        .logo-variations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .logo-example {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+
+        .logo-example.dark {
+            background: #333;
+            color: white;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .usage-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .usage-card h4 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .do-card {
+            background: #d4edd9;
+            border-left: 4px solid #28a745;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .dont-card {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .do-card h4 {
+            color: #155724;
+            margin-bottom: 1rem;
+        }
+
+        .dont-card h4 {
+            color: #721c24;
+            margin-bottom: 1rem;
+        }
+
+        .template-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .template-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .template-preview {
+            height: 150px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .template-info {
+            padding: 1rem;
+        }
+
+        .template-name {
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .template-description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .color-palette,
+            .logo-variations,
+            .usage-grid,
+            .template-showcase {
+                grid-template-columns: 1fr;
+            }
+            .do-dont {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-button">← Back to Portfolio</a>
+        
+        <div class="header">
+            <div class="brand-logo">CREST SOLICITORS</div>
+            <div class="document-title">Brand Guidelines & Style Guide</div>
+            <div class="document-subtitle">Comprehensive brand standards for consistent communication</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎨 Brand Color Palette</h2>
+            <p>Our carefully selected color palette reflects trust, professionalism, and reliability - core values that define Crest Solicitors.</p>
+            
+            <div class="color-palette">
+                <div class="color-card">
+                    <div class="color-swatch primary-blue">PRIMARY</div>
+                    <div class="color-info">
+                        <div class="color-name">Crest Navy</div>
+                        <div class="color-code">HEX: #1e3c72<br>RGB: 30, 60, 114</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch secondary-blue">SECONDARY</div>
+                    <div class="color-info">
+                        <div class="color-name">Professional Blue</div>
+                        <div class="color-code">HEX: #2a5298<br>RGB: 42, 82, 152</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch accent-gold">ACCENT</div>
+                    <div class="color-info">
+                        <div class="color-name">Trust Gold</div>
+                        <div class="color-code">HEX: #d4af37<br>RGB: 212, 175, 55</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch neutral-gray">NEUTRAL</div>
+                    <div class="color-info">
+                        <div class="color-name">Corporate Gray</div>
+                        <div class="color-code">HEX: #6c757d<br>RGB: 108, 117, 125</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch light-gray">BACKGROUND</div>
+                    <div class="color-info">
+                        <div class="color-name">Clean White</div>
+                        <div class="color-code">HEX: #f8f9fa<br>RGB: 248, 249, 250</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">✍️ Typography Standards</h2>
+            <p>Consistent typography reinforces our professional image and ensures excellent readability across all communications.</p>
+            
+            <div class="typography-sample font-primary">
+                <h3>Primary Font: Georgia (Serif)</h3>
+                <p><strong>Usage:</strong> Headlines, formal documents, printed materials</p>
+                <p><strong>Sample:</strong> "Excellence in Legal Service Since 1995"</p>
+                <div style="font-size: 0.9rem; margin-top: 1rem;">
+                    <strong>Character Set:</strong> ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz 1234567890
+                </div>
+            </div>
+            
+            <div class="typography-sample font-secondary">
+                <h3>Secondary Font: Helvetica (Sans-serif)</h3>
+                <p><strong>Usage:</strong> Body text, digital communications, presentations</p>
+                <p><strong>Sample:</strong> "Professional legal counsel you can trust"</p>
+                <div style="font-size: 0.9rem; margin-top: 1rem;">
+                    <strong>Character Set:</strong> ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    abcdefghijklmnopqrstuvwxyz 1234567890
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🏛️ Logo Usage Guidelines</h2>
+            <p>Our logo is the cornerstone of our brand identity. Proper usage ensures consistent brand recognition.</p>
+            
+            <div class="logo-variations">
+                <div class="logo-example">
+                    <div class="logo-text" style="color: #1e3c72;">CREST SOLICITORS</div>
+                    <div style="font-size: 0.9rem; margin-top: 1rem;">Primary Logo - Light Backgrounds</div>
+                </div>
+                <div class="logo-example dark">
+                    <div class="logo-text">CREST SOLICITORS</div>
+                    <div style="font-size: 0.9rem; margin-top: 1rem;">Reverse Logo - Dark Backgrounds</div>
+                </div>
+                <div class="logo-example">
+                    <div class="logo-text" style="color: #d4af37;">CREST SOLICITORS</div>
+                    <div style="font-size: 0.9rem; margin-top: 1rem;">Gold Accent Version</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📋 Usage Guidelines</h2>
+            
+            <div class="do-dont">
+                <div class="do-card">
+                    <h4>✓ DO</h4>
+                    <ul>
+                        <li>Use approved color combinations</li>
+                        <li>Maintain proper logo spacing</li>
+                        <li>Use high-resolution images</li>
+                        <li>Keep typography consistent</li>
+                        <li>Follow template guidelines</li>
+                        <li>Maintain professional tone</li>
+                    </ul>
+                </div>
+                <div class="dont-card">
+                    <h4>✗ DON'T</h4>
+                    <ul>
+                        <li>Alter logo proportions</li>
+                        <li>Use unauthorized colors</li>
+                        <li>Mix incompatible fonts</li>
+                        <li>Place logo on busy backgrounds</li>
+                        <li>Use low-quality images</li>
+                        <li>Deviate from approved layouts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📄 Communication Templates</h2>
+            <p>Standardized templates ensure consistency across all touchpoints and save time while maintaining professional appearance.</p>
+            
+            <div class="template-showcase">
+                <div class="template-card">
+                    <div class="template-preview">LETTERHEAD</div>
+                    <div class="template-info">
+                        <div class="template-name">Official Letterhead</div>
+                        <div class="template-description">For formal correspondence and legal documents</div>
+                    </div>
+                </div>
+                <div class="template-card">
+                    <div class="template-preview">EMAIL SIGNATURE</div>
+                    <div class="template-info">
+                        <div class="template-name">Email Signature</div>
+                        <div class="template-description">Standardized format for all staff communications</div>
+                    </div>
+                </div>
+                <div class="template-card">
+                    <div class="template-preview">PRESENTATION</div>
+                    <div class="template-info">
+                        <div class="template-name">PowerPoint Template</div>
+                        <div class="template-description">For client presentations and internal meetings</div>
+                    </div>
+                </div>
+                <div class="template-card">
+                    <div class="template-preview">BUSINESS CARD</div>
+                    <div class="template-info">
+                        <div class="template-name">Business Cards</div>
+                        <div class="template-description">Professional networking and contact information</div>
+                    </div>
+                </div>
+                <div class="template-card">
+                    <div class="template-preview">NEWSLETTER</div>
+                    <div class="template-info">
+                        <div class="template-name">Newsletter Layout</div>
+                        <div class="template-description">Quarterly communications template</div>
+                    </div>
+                </div>
+                <div class="template-card">
+                    <div class="template-preview">SOCIAL MEDIA</div>
+                    <div class="template-info">
+                        <div class="template-name">Social Templates</div>
+                        <div class="template-description">LinkedIn and other platform graphics</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💼 Application Examples</h2>
+            
+            <div class="usage-grid">
+                <div class="usage-card">
+                    <h4>Print Materials</h4>
+                    <ul>
+                        <li>Business cards and letterheads</li>
+                        <li>Brochures and flyers</li>
+                        <li>Legal document templates</li>
+                        <li>Office signage and displays</li>
+                    </ul>
+                </div>
+                <div class="usage-card">
+                    <h4>Digital Communications</h4>
+                    <ul>
+                        <li>Website headers and footers</li>
+                        <li>Email templates and signatures</li>
+                        <li>Social media graphics</li>
+                        <li>Online advertisements</li>
+                    </ul>
+                </div>
+                <div class="usage-card">
+                    <h4>Internal Documents</h4>
+                    <ul>
+                        <li>Presentation templates</li>
+                        <li>Report covers and layouts</li>
+                        <li>Meeting materials</li>
+                        <li>Training documentation</li>
+                    </ul>
+                </div>
+                <div class="usage-card">
+                    <h4>Marketing Materials</h4>
+                    <ul>
+                        <li>Advertisement designs</li>
+                        <li>Conference banners</li>
+                        <li>Promotional items</li>
+                        <li>Client welcome packages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📊 Implementation Results</h2>
+            <p>Since implementing these brand guidelines:</p>
+            
+            <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                    <div>
+                        <div style="font-size: 2rem; font-weight: bold; color: #1e3c72;">100%</div>
+                        <div style="font-size: 0.9rem; color: #666;">Brand Consistency</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; font-weight: bold; color: #1e3c72;">35%</div>
+                        <div style="font-size: 0.9rem; color: #666;">Improved Recognition</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; font-weight: bold; color: #1e3c72;">50+</div>
+                        <div style="font-size: 0.9rem; color: #666;">Templates Created</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; font-weight: bold; color: #1e3c72;">25%</div>
+                        <div style="font-size: 0.9rem; color: #666;">Time Savings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="text-align: center; background: #1e3c72; color: white;">
+            <h2 style="color: white; border-bottom: 2px solid rgba(255,255,255,0.3);">Contact Information</h2>
+            <p>For questions about brand guidelines or template requests:</p>
+            <div style="margin: 1rem 0; font-weight: bold;">
+                Crystal Keyamo - Communications Coordinator<br>
+                communications@crestsolicitors.com
+            </div>
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                Guidelines developed by Crystal Keyamo | Last updated: 2022
+            </p>
+        </div>
+    </div>
+</body>
+</html>

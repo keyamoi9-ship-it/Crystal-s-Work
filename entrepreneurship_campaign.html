@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Entrepreneurship Campaign | Crystal Keyamo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; margin-bottom: 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+        .campaign-title { font-size: 2.5rem; color: #333; margin-bottom: 1rem; }
+        .campaign-subtitle { font-size: 1.2rem; color: #666; margin-bottom: 2rem; }
+        .metrics-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .metric-card { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 1.5rem; border-radius: 10px; text-align: center; }
+        .metric-number { font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .metric-label { font-size: 0.9rem; opacity: 0.9; }
+        .section { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 1.8rem; color: #333; margin-bottom: 1.5rem; border-left: 4px solid #667eea; padding-left: 1rem; }
+        .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .content-card { background: #f8f9ff; border: 1px solid #e1e7ff; border-radius: 10px; padding: 1.5rem; transition: transform 0.3s ease; }
+        .content-card:hover { transform: translateY(-5px); }
+        .content-card h3 { color: #667eea; margin-bottom: 1rem; font-size: 1.2rem; }
+        .platform-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .platform-card { background: linear-gradient(135deg, #a8edea, #fed6e3); border-radius: 10px; padding: 1.5rem; text-align: center; color: #333; }
+        .platform-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .platform-name { font-weight: bold; margin-bottom: 0.5rem; }
+        .platform-growth { font-size: 1.2rem; font-weight: bold; color: #667eea; }
+        .campaign-timeline { background: #f8f9ff; border-left: 4px solid #667eea; padding: 1.5rem; margin: 1.5rem 0; }
+        .timeline-item { margin-bottom: 1rem; padding-left: 1rem; border-left: 2px solid #ddd; position: relative; }
+        .timeline-item::before { content: '●'; position: absolute; left: -6px; color: #667eea; font-weight: bold; }
+        .timeline-date { font-weight: bold; color: #667eea; font-size: 0.9rem; }
+        .sample-posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .social-post { background: white; border: 1px solid #ddd; border-radius: 10px; padding: 1rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+        .post-header { display: flex; align-items: center; margin-bottom: 1rem; }
+        .profile-pic { width: 40px; height: 40px; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 50%; margin-right: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+        .post-info { flex: 1; }
+        .account-name { font-weight: bold; font-size: 0.9rem; }
+        .post-time { font-size: 0.8rem; color: #666; }
+        .post-content { margin-bottom: 1rem; line-height: 1.5; }
+        .post-image { width: 100%; height: 150px; background: linear-gradient(45deg, #ffeaa7, #fab1a0); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold; color: #333; margin-bottom: 1rem; }
+        .post-engagement { display: flex; justify-content: space-between; font-size: 0.8rem; color: #666; border-top: 1px solid #eee; padding-top: 0.5rem; }
+        .back-button { background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid rgba(255, 255, 255, 0.3); padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; backdrop-filter: blur(10px); display: inline-block; margin-bottom: 2rem; }
+        .back-button:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
+        @media (max-width: 768px) {
+            .campaign-title { font-size: 2rem; }
+            .content-grid,
+            .platform-showcase,
+            .sample-posts { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-button">← Back to Portfolio</a>
+        
+        <div class="header">
+            <h1 class="campaign-title">🚀 Student Entrepreneurship Campaign</h1>
+            <p class="campaign-subtitle">Multi-platform digital marketing campaign promoting student innovation and business development</p>
+            <div class="metrics-overview">
+                <div class="metric-card">
+                    <div class="metric-number">40%</div>
+                    <div class="metric-label">Follower Growth</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">250+</div>
+                    <div class="metric-label">Content Pieces</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">5</div>
+                    <div class="metric-label">Platforms</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">60%</div>
+                    <div class="metric-label">Engagement Boost</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📊 Campaign Overview</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Campaign Objectives</h3>
+                    <ul>
+                        <li>Increase awareness of entrepreneurship programs</li>
+                        <li>Showcase student success stories</li>
+                        <li>Drive applications to business incubator</li>
+                        <li>Build community of young entrepreneurs</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Target Audience</h3>
+                    <ul>
+                        <li>University students (18-25)</li>
+                        <li>Young professionals (22-30)</li>
+                        <li>Aspiring entrepreneurs</li>
+                        <li>Business mentors and investors</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Key Messaging Themes</h3>
+                    <ul>
+                        <li>"Your Ideas Matter"</li>
+                        <li>"From Dorm Room to Boardroom"</li>
+                        <li>"Innovation Starts Here"</li>
+                        <li>"Building Tomorrow's Leaders"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📱 Platform Performance</h2>
+            <div class="platform-showcase">
+                <div class="platform-card">
+                    <div class="platform-icon">📘</div>
+                    <div class="platform-name">Facebook</div>
+                    <div class="platform-growth">+35% growth</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">📸</div>
+                    <div class="platform-name">Instagram</div>
+                    <div class="platform-growth">+45% growth</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🐦</div>
+                    <div class="platform-name">Twitter</div>
+                    <div class="platform-growth">+40% growth</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">💼</div>
+                    <div class="platform-name">LinkedIn</div>
+                    <div class="platform-growth">+50% growth</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🎵</div>
+                    <div class="platform-name">TikTok</div>
+                    <div class="platform-growth">+65% growth</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📅 Campaign Timeline</h2>
+            <div class="campaign-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Phase 1: Research & Strategy (Weeks 1-2)</div>
+                    <div>Audience analysis, competitive research, content strategy development</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Phase 2: Content Creation (Weeks 3-6)</div>
+                    <div>Photography, video production, graphic design, copywriting</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Phase 3: Campaign Launch (Week 7)</div>
+                    <div>Coordinated multi-platform launch with influencer partnerships</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Phase 4: Optimization (Weeks 8-12)</div>
+                    <div>Performance monitoring, A/B testing, content refinement</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📝 Sample Content</h2>
+            <div class="sample-posts">
+                <div class="social-post">
+                    <div class="post-header">
+                        <div class="profile-pic">SE</div>
+                        <div class="post-info">
+                            <div class="account-name">Student Entrepreneurship Hub</div>
+                            <div class="post-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        🚀 Meet Bola, 20, who turned her dorm room coding sessions into a fast-growing app! 
+
+                        Her journey from idea to launch in just 6 months proves that age is just a number when you have passion and the right support.
+
+                        What's your million-naira idea? 💡
+
+                        #StudentEntrepreneur #TechStartup #Innovation
+                    </div>
+                    <div class="post-image">Success Story Graphic</div>
+                    <div class="post-engagement">
+                        <span>❤️ Likes</span>
+                        <span>💬 Comments</span>
+                        <span>🔄 Shares</span>
+                    </div>
+                </div>
+                <div class="social-post">
+                    <div class="post-header">
+                        <div class="profile-pic">SE</div>
+                        <div class="post-info">
+                            <div class="account-name">Student Entrepreneurship Hub</div>
+                            <div class="post-time">1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        📊 Did you know? A majority of Gen Z wants to be their own boss!
+
+                        Our incubator program helps turn that dream into reality:
+                        ✅ Free mentorship
+                        ✅ Funding opportunities  
+                        ✅ Networking events
+                        ✅ Business skills training
+
+                        Applications open this month! Link in bio 👆
+
+                        #GenZEntrepreneurs #BusinessIncubator #StartupLife
+                    </div>
+                    <div class="post-image">Infographic Design</div>
+                    <div class="post-engagement">
+                        <span>❤️ Likes</span>
+                        <span>💬 Comments</span>
+                        <span>🔄 Shares</span>
+                    </div>
+                </div>
+                <div class="social-post">
+                    <div class="post-header">
+                        <div class="profile-pic">SE</div>
+                        <div class="post-info">
+                            <div class="account-name">Student Entrepreneurship Hub</div>
+                            <div class="post-time">3 days ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        🎯 Monday Motivation: "The way to get started is to quit talking and begin doing." - Walt Disney
+
+                        This week's challenge: Take ONE action toward your business idea. Could be:
+                        → Market research
+                        → Creating a logo
+                        → Building a simple website
+                        → Talking to potential customers
+
+                        What will YOU do? Drop it in the comments! 👇
+
+                        #MondayMotivation #JustStart #EntrepreneurMindset
+                    </div>
+                    <div class="post-image">Motivational Quote</div>
+                    <div class="post-engagement">
+                        <span>❤️ Likes</span>
+                        <span>💬 Comments</span>
+                        <span>🔄 Shares</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📈 Results & Impact</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Quantitative Results</h3>
+                    <ul>
+                        <li>40% increase in overall following</li>
+                        <li>60% boost in post engagement</li>
+                        <li>250+ pieces of content created</li>
+                        <li>85% increase in program applications</li>
+                        <li>300% growth in website traffic</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Qualitative Impact</h3>
+                    <ul>
+                        <li>Strengthened brand recognition</li>
+                        <li>Built active community of entrepreneurs</li>
+                        <li>Established thought leadership</li>
+                        <li>Increased media coverage</li>
+                        <li>Enhanced university partnerships</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Tools & Technologies Used</h3>
+                    <ul>
+                        <li>Hootsuite for scheduling</li>
+                        <li>Canva for graphic design</li>
+                        <li>Google Analytics for tracking</li>
+                        <li>Buffer for optimization</li>
+                        <li>Adobe Creative Suite for video</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate metric cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transform = 'scale(1.05)';
+                        setTimeout(() => {
+                            entry.target.style.transform = 'scale(1)';
+                        }, 200);
+                    }
+                });
+            });
+            document.querySelectorAll('.metric-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

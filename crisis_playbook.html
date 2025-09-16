@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crisis Communication Playbook - Crystal Keyamo</title>
+</head>
+<body>
+  <!-- Crisis Communication Playbook Section -->
+  <section id="crisis-playbook" class="section section-light crisis-playbook" aria-labelledby="crisis-heading">
+    <div class="container">
+      <h2 id="crisis-heading" class="section-title">Crisis Communication Playbook</h2>
+
+      <div class="intro-card">
+        <h3>Turn uncertainty into control</h3>
+        <p>
+          A compact, actionable playbook I use to lead clear, confident responses when it matters most.
+          Built for speed, consistency and reputational protection — suitable for startups, NGOs and corporate teams.
+        </p>
+        <div class="playbook-cta">
+          <button class="btn btn-primary" id="download-full-playbook">Download Full Playbook (TXT)</button>
+          <button class="btn btn-secondary" id="email-playbook">Email Playbook</button>
+        </div>
+      </div>
+
+      <!-- Accordion with playbook content -->
+      <div class="accordion" role="tablist" aria-multiselectable="true">
+        <!-- Example item -->
+        <div class="accordion-item">
+          <button class="accordion-toggle" aria-expanded="false" aria-controls="panel-triage" id="toggle-triage">
+            1. Activation & Triage — First 0–60 minutes
+            <span class="chev">▾</span>
+          </button>
+          <div id="panel-triage" class="accordion-panel" role="region" aria-labelledby="toggle-triage" hidden>
+            <ol>
+              <li><strong>Alert & acknowledge:</strong> Confirm incident with facts; notify Crisis Lead and Legal.</li>
+              <li><strong>Assemble core team:</strong> Crisis Lead, Comms Lead, Legal, Ops, HR (if needed).</li>
+              <li><strong>Triage impact:</strong> Safety risk, regulatory exposure, reputation, operational disruption.</li>
+              <li><strong>Immediate output:</strong> Holding statement and internal summary for leadership.</li>
+            </ol>
+            <p class="small-note">Goal: reduce confusion. Provide consistent, factual updates every 30–60 minutes until stable.</p>
+          </div>
+        </div>
+
+        <!-- Holding Statement Template -->
+        <div class="accordion-item">
+          <button class="accordion-toggle" aria-expanded="false" aria-controls="panel-hold" id="toggle-hold">
+            2. Holding Statement — Template & quick actions
+            <span class="chev">▾</span>
+          </button>
+          <div id="panel-hold" class="accordion-panel" role="region" aria-labelledby="toggle-hold" hidden>
+            <pre id="holding-template" class="template-block">
+We are aware of an incident affecting [what/where]. Our immediate priorities are the safety of affected people and an accurate understanding of the situation. We are currently assessing the impact and working with relevant authorities. We will provide updated information as soon as possible. For media inquiries: [press@yourorg.com]
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; }
+    .crisis-playbook { padding: 2rem; }
+    .section-title { font-size: 2rem; text-align:center; margin-bottom:1.5rem; color:#764ba2; }
+    .intro-card { background:#fff; padding:1.5rem; border-radius:8px; margin-bottom:1rem; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+    .btn { padding:0.6rem 1.2rem; border-radius:25px; font-weight:600; cursor:pointer; border:none; }
+    .btn-primary { background:#764ba2; color:#fff; }
+    .btn-secondary { background:transparent; border:2px solid #764ba2; color:#764ba2; }
+    .accordion-item { margin-top:1rem; }
+    .accordion-toggle { width:100%; text-align:left; padding:1rem; background:#eee; border:none; font-weight:bold; cursor:pointer; display:flex; justify-content:space-between; }
+    .accordion-panel { background:#fff; padding:1rem; border:1px solid #ddd; border-top:none; }
+    .template-block { background:#f4f4f8; padding:1rem; border-radius:5px; white-space:pre-wrap; }
+  </style>
+
+  <script>
+    const toggles = document.querySelectorAll('.accordion-toggle');
+    toggles.forEach(btn => {
+      btn.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        const panel = document.getElementById(this.getAttribute('aria-controls'));
+        panel.hidden = expanded;
+      });
+    });
+  </script>
+</body>
+</html>
